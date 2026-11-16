@@ -1,0 +1,11 @@
+﻿ticker,pe_ratio,mean_per_3y,mean_per_5y,book_value,pbv_ratio,mean_pbv_3y,mean_pbv_5y,roe,npm,eps_ttm,der,div_yield,status,source,financial_currency,currency,note
+BBCA,11.387163,,,2307.191,2.3838513,,,21.199,53.305,483.0,0.0014,6.9299996,OK,"yahoo:quoteSummary, msn:equities, msn:quotes",IDR,IDR,
+BBRI,7.251185,,,2248.957,1.3606308,,,18.742001,42.765,422.0,0.1294,13.66,OK,"yahoo:quoteSummary, msn:equities, msn:quotes",IDR,IDR,
+BMRI,5.6613936,,,3150.444,1.2347466,,,21.757999,45.836,687.11,0.4324,13.96,OK,"yahoo:quoteSummary, msn:equities, msn:quotes",IDR,IDR,
+TLKM,13.238539,,,1241.989,1.7391459,,,16.298000000000002,11.4379995,163.16,0.56278,10.33,OK,yahoo:quoteSummary,IDR,IDR,
+ASII,7.372654,,,5999.431,0.9167536,,,11.630999000000001,9.238,746.0,0.39482,7.090000000000001,OK,yahoo:quoteSummary,IDR,IDR,
+ANTM,7.5863934,,,1650.497,1.7025175,,,28.694999999999997,9.963000599999999,370.4,0.15979,7.470000000000001,OK,yahoo:quoteSummary,IDR,IDR,
+UNVR,16.55522,,,110.719,13.863926,,,101.96300000000001,25.27,92.72,0.13353,14.850000999999999,OK,yahoo:quoteSummary,IDR,IDR,
+ICBP,9.43662,,,4744.568,1.4121412,,,13.506000000000002,9.9750005,710.0,0.64968,3.9600000000000004,OK,yahoo:quoteSummary,IDR,IDR,
+GOTO,38.80597,,,30.954,0.83995605,,,1.228,3.497,0.67,0.28533000000000003,0.0,OK,yahoo:quoteSummary,IDR,IDR,
+ADRO,6.2566223,,,,,,,14.187999000000001,27.305,396.38,0.3256,9.54,OK,yahoo:quoteSummary,USD,IDR,PBV/book_value kosong karena mata uang harga dan laporan keuangan berbeda
