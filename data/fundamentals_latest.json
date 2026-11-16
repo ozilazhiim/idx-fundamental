@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at_utc": "2026-11-16T01:07:49+00:00",
+    "updated_at_utc": "2026-11-16T01:20:02+00:00",
     "provider": "ihsg-cli / idx, automatic provider chain (Yahoo Finance + MSN Money)",
     "requested_tickers": 10,
     "successful_tickers": 10,
@@ -95,7 +95,7 @@
     },
     {
       "ticker": "TLKM",
-      "pe_ratio": 13.238539,
+      "pe_ratio": 13.054514,
       "mean_per_3y": null,
       "mean_per_5y": null,
       "book_value": 1241.989,
@@ -104,7 +104,7 @@
       "mean_pbv_5y": null,
       "roe": 16.298000000000002,
       "npm": 11.4379995,
-      "eps_ttm": 163.16,
+      "eps_ttm": 165.46,
       "der": 0.56278,
       "div_yield": 10.33,
       "status": "OK",
