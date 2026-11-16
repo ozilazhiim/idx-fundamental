@@ -1,0 +1,63 @@
+name: Update IDX Fundamentals
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 05:00 WIB, Monday-Friday (22:00 UTC, Sunday-Thursday)
+    - cron: '0 22 * * 0-4'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: idx-fundamentals-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install ihsg-cli
+        run: npm install --global ihsg-cli@0.8.3
+
+      - name: Check CLI
+        run: |
+          idx version
+          idx -o json stocks compare BBCA,BBRI > /tmp/idx-smoke-test.json
+          python -m json.tool /tmp/idx-smoke-test.json > /dev/null
+
+      - name: Fetch fundamentals
+        env:
+          IDX_CHUNK_SIZE: '8'
+          IDX_SLEEP_SECONDS: '1.5'
+          IDX_MAX_RETRIES: '3'
+        run: python scripts/fetch_fundamentals.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/fundamentals_latest.json data/fundamentals_latest.csv
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "Update IDX fundamentals data"
+            git push origin HEAD:main
+          fi

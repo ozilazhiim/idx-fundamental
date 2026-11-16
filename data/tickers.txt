@@ -1,0 +1,12 @@
+# Replace this sample list with your 950 tickers from Google Sheets.
+# One ticker per line is recommended. The .JK suffix is optional.
+BBCA
+BBRI
+BMRI
+TLKM
+ASII
+ANTM
+UNVR
+ICBP
+GOTO
+ADRO
